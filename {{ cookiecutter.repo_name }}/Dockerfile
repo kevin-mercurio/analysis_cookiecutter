@@ -9,20 +9,19 @@ USER $NB_UID
 # Install Python 3 packages
 RUN conda install --quiet --yes \
     'conda-forge::blas=*=openblas' \
-    'pandas=0.23*' \
-    'numexpr=2.6*' \
-    'matplotlib=2.2*' \
-    'scipy=1.1*' \
-    'seaborn=0.9*' \
-    'scikit-learn=0.19*' \
-    'statsmodels=0.9*' \
-    'cloudpickle=0.5*' \
-    'dill=0.2*' \
-    'bokeh=0.12*' \
-    'sqlalchemy=1.2*' \
-    'vincent=0.4.*' \
-    'beautifulsoup4=4.6.*' \
-    'xgboost' \ 
+    'pandas' \
+    'matplotlib' \
+    'scipy' \
+    'seaborn' \
+    'scikit-learn' \
+    'statsmodels' \
+    'cloudpickle' \
+    'dill' \
+    'bokeh' \
+    'sqlalchemy' \
+    'beautifulsoup4' \
+    'xgboost' \
+    'rpy2' \
     'xlrd'  && \
     conda remove --quiet --yes --force qt pyqt && \
     conda clean -tipsy && \
@@ -35,4 +34,3 @@ RUN conda install --quiet --yes \
 
 RUN conda install -c conda-forge jupyter_contrib_nbextensions && \ 
     conda install -c conda-forge jupyter_nbextensions_configurator
-
