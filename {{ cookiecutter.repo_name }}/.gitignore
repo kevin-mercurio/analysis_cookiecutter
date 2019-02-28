@@ -1,0 +1,3 @@
+#don't store data, etc
+data/*
+*.csv
